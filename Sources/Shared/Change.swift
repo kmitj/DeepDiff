@@ -9,22 +9,43 @@
 import Foundation
 
 public struct Insert<T> {
+    public init(item: T, index: Int) {
+        self.item = item
+        self.index = index
+    }
+    
   public let item: T
   public let index: Int
 }
 
 public struct Delete<T> {
+    public init(item: T, index: Int) {
+        self.item = item
+        self.index = index
+    }
+    
   public let item: T
   public let index: Int
 }
 
 public struct Replace<T> {
+    public init(oldItem: T, newItem: T, index: Int) {
+        self.oldItem = oldItem
+        self.newItem = newItem
+        self.index = index
+    }
+    
   public let oldItem: T
   public let newItem: T
   public let index: Int
 }
 
 public struct Move<T> {
+    public init(item: T, fromIndex: Int, toIndex: Int) {
+        self.item = item
+        self.fromIndex = fromIndex
+        self.toIndex = toIndex
+    }
   public let item: T
   public let fromIndex: Int
   public let toIndex: Int
